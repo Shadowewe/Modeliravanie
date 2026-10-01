@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация пользователя</title>
+</head>
+<body>
+    <h2>Форма регистрации</h2>
+    <form action="obrabotchik.php" method="post">
+        <p>
+            <label for="login">Логин:</label><br>
+            <input type="text" id="login" name="login" required>
+        </p>
+        <p>
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password" required>
+        </p>
+        <p>
+            <label for="email">Электронная почта:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            Пол:<br>
+            <input type="radio" id="male" name="gender" value="Мужской" checked>
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="Женский">
+            <label for="female">Женский</label>
+        </p>
+        <p>
+            <label for="city">Город:</label><br>
+            <select id="city" name="city">
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Казань">Казань</option>
+                <option value="Уфа">Уфа</option>
+            </select>
+        </p>
+        <p>
+            <label for="about">О себе:</label><br>
+            <textarea id="about" name="about" rows="5" cols="40"></textarea>
+        </p>
+        <p>
+            <input type="checkbox" id="subscribe" name="subscribe" value="Да">
+            <label for="subscribe">Получать рассылку новостей</label>
+        </p>
+        <p>
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </p>
+    </form>
+</body>
+</html>
