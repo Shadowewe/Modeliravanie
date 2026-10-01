@@ -2,50 +2,48 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Регистрация пользователя</title>
+    <title>Вариант 2</title>
 </head>
 <body>
-    <h2>Форма регистрации</h2>
+    <h2>Ваш отзыв о наших услугах</h2>
     <form action="obrabotchik.php" method="post">
         <p>
-            <label for="login">Логин:</label><br>
-            <input type="text" id="login" name="login" required>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" value="Аноним">
         </p>
         <p>
-            <label for="password">Пароль:</label><br>
-            <input type="password" id="password" name="password" required>
+            <label for="age">Ваш возраст:</label><br>
+            <select id="age" name="age">
+                <option value="менее 20">менее 20</option>
+                <option value="20-30">20-30</option>
+                <option value="более 30">более 30</option>
+            </select>
         </p>
         <p>
-            <label for="email">Электронная почта:</label><br>
-            <input type="email" id="email" name="email" required>
-        </p>
-        <p>
-            Пол:<br>
-            <input type="radio" id="male" name="gender" value="Мужской" checked>
+            Ваш пол:
+            <input type="radio" id="male" name="gender" value="Мужской">
             <label for="male">Мужской</label>
             <input type="radio" id="female" name="gender" value="Женский">
             <label for="female">Женский</label>
         </p>
         <p>
-            <label for="city">Город:</label><br>
-            <select id="city" name="city">
-                <option value="Москва">Москва</option>
-                <option value="Санкт-Петербург">Санкт-Петербург</option>
-                <option value="Казань">Казань</option>
-                <option value="Уфа">Уфа</option>
-            </select>
+            Ваши интересы:<br>
+            <input type="checkbox" id="comp" name="interests[]" value="Компьютеры">
+            <label for="comp">Компьютеры</label>
+            <input type="checkbox" id="sport" name="interests[]" value="Спорт">
+            <label for="sport">Спорт</label>
+            <input type="checkbox" id="art" name="interests[]" value="Искусство">
+            <label for="art">Искусство</label><br>
+            <input type="checkbox" id="science" name="interests[]" value="Наука">
+            <label for="science">Наука</label>
         </p>
         <p>
-            <label for="about">О себе:</label><br>
-            <textarea id="about" name="about" rows="5" cols="40"></textarea>
-        </p>
-        <p>
-            <input type="checkbox" id="subscribe" name="subscribe" value="Да">
-            <label for="subscribe">Получать рассылку новостей</label>
+            <label for="opinion">Ваше мнение:</label><br>
+            <textarea id="opinion" name="opinion" rows="5" cols="40"></textarea>
         </p>
         <p>
             <input type="submit" value="Отправить">
-            <input type="reset" value="Очистить">
+            <input type="reset" value="Очистить форму">
         </p>
     </form>
 </body>
